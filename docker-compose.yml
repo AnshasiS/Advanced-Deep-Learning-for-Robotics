@@ -1,0 +1,12 @@
+version: "3"
+services:
+  adlr:
+    build: .
+    image: advanced-deep-learning
+    container_name: advanced-dl-
+    volumes:
+      - ./:/host
+    command: jupyter notebook --allow-root /host
+    ports:
+      - "8888:8888"
+      - "6006:6006"
